@@ -15,7 +15,7 @@ def index():
         app.logger.exception("Redis error")
         return "Sorry, something went wrong \N{PENSIVE FACE}", 500
     else:
-        return f"This page has been seen {page_views} times. Today is a great day!"
+        return f"This page has been seen {page_views} times."
 
 
 @cache
