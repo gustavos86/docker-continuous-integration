@@ -20,11 +20,17 @@ COPY --chown=realpython test/ test/
 
 RUN python -m pip install . -c constraints.txt && \
     python -m pytest test/unit/ && \
+    echo "pytest OK" && \
     python -m flake8 src/ && \
+    echo "flake8 OK" && \
     python -m isort src/ --check && \
+    echo "isort OK" && \
     python -m black src/ --check --quiet && \
+    echo "black OK" && \
     python -m pylint src/ --disable=C0114,C0116,R1705 && \
+    echo "pylint OK" && \
     python -m bandit -r src/ --quiet && \
+    echo "bandit OK" && \
     python -m pip wheel --wheel-dir dist/ . -c constraints.txt
 
 FROM python:3.11.2-slim-bullseye
