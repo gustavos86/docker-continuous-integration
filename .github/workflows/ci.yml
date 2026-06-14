@@ -33,5 +33,5 @@ jobs:
           context: ./web
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/gustavos86:${{ github.sha }}
-            ${{ secrets.DOCKERHUB_USERNAME }}/gustavos86:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/page-tracker:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/page-tracker:latest
