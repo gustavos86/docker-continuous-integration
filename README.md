@@ -1,19 +1,19 @@
 # Unit test
 
 ```
-python -m pytest -v test/unit/
+python -m pytest -v web/test/unit/
 ```
 
 # Integration test
 
 ```
-python -m pytest -v test/integration/
+python -m pytest -v web/test/integration/
 ```
 
 # e2e test
 
 ```
-python -m pytest -v test/e2e/ \
+python -m pytest -v web/test/e2e/ \
   --flask-url http://127.0.0.1:5000 \
   --redis-url redis://127.0.0.1:6379
 ```
